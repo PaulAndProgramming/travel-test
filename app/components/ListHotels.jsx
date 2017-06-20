@@ -53,6 +53,15 @@ class ListHotels extends React.Component {
         hotels.sort((a, b) => {
           return b.Distance-a.Distance;
         });
+      case "USER_RATING_ASCENDING":
+        hotels.sort((a, b) => {
+          return a.UserRating-b.UserRating;
+        });
+        break;
+      case "USER_RATING_DESCENDING":
+        hotels.sort((a, b) => {
+          return b.UserRating-a.UserRating;
+        });
         break;
     }
     return hotels;

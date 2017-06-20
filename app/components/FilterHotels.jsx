@@ -31,6 +31,10 @@ class FilterHotels extends React.Component {
         return this.props.changeOrdering("DISTANCE_ASCENDING");
       case 6:
         return this.props.changeOrdering("DISTANCE_DESCENDING");
+      case 7:
+        return this.props.changeOrdering("USER_RATING_ASCENDING");
+      case 8:
+        return this.props.changeOrdering("USER_RATING_DESCENDING");
       default:
         return this.props.changeOrdering("DEFAULT");
     }
@@ -69,15 +73,17 @@ class FilterHotels extends React.Component {
         </form>
 
         <div>
-          <div>Sorting:</div>
+          <div>Sort by:</div>
           <select ref='Ordering' defaultValue="Default" onChange={this.changeOrdering.bind(this)}>
             <option>Default</option>
-            <option>By price ascending</option>
-            <option>By price descending</option>
-            <option>By stars ascending</option>
-            <option>By stars descending</option>
-            <option>By distance ascending</option>
-            <option>By distance descending</option>
+            <option>Price ascending</option>
+            <option>Price descending</option>
+            <option>Stars ascending</option>
+            <option>Stars descending</option>
+            <option>Distance ascending</option>
+            <option>Distance descending</option>
+            <option>User rating descending</option>
+            <option>User rating descending</option>
           </select>
         </div>
       </div>
