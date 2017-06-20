@@ -1,0 +1,4 @@
+node_modules/
+public/bundle.js
+server/config/config.json
+.DS_Store
